@@ -1,0 +1,263 @@
+body{
+    width: 900px;
+    margin: 10px auto;
+    padding: 5px 5px 5px 5px;
+    background-color: #02010a;
+    font-size: 16px;
+    font-family: Dancing Script;
+
+}
+.flex-container {
+
+    /* Flexbox */
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    width: 100%;
+    box-sizing: border-box;
+    border:1px;
+    text-align: center;
+    animation-duration: 1.5s;
+    animation-name: slidein;
+}
+
+.flex-container > * {
+    padding: 5px 5px 5px 5px;
+    flex: 1 100%;
+}
+
+.main {
+    display: flex;
+    flex-wrap:wrap;
+
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    align-items: center;
+
+    background: #82c3a6;
+
+}
+.responsive-image{
+    width: 100%;
+
+}
+
+
+
+@keyframes slidein {
+    0%{
+        margin-top : 150%;
+    }
+    60%{
+        margin-top : -5%;
+    }
+    100%{
+        margin-top : 0%;
+    }
+}
+
+
+.header {
+    color: white;
+    background: #5b7989;
+    text-shadow: 2px 0px 0px #02010a;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    align-items:center;
+
+
+    flex-direction:row;
+    flex-wrap:wrap;
+
+}
+.header a {
+    color: white;
+}
+.footer {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+
+    background: #C6d5c5;
+    border-radius: 0px 0px 10px 10px;
+}
+.footer p{
+    font-size: 14px;
+}
+.aside1,.aside2,.aside3,.aside4,.aside5,.aside6 {
+    background:  #d5c75f;
+    border: 1px;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    align-items: center;
+
+}
+
+#imagenIZQ a, #imagenDER a{
+    color:black;
+}
+
+#imagenDER{
+    -webkit-transition: -webkit-transform 1s ease-out;
+    -moz-transition: -moz-transform 1s ease-out;
+    transition: transform 1s ease-out;
+}
+
+
+#imagenIZQ:hover {
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+#imagenDER:hover {
+    -moz-transform: translate(20px, -5px);
+    -ms-transform: translate(20px, -5px);
+    -o-transform: translate(20px, -5px);
+    -webkit-transform: translate(20px, -5px);
+    transform: translate(20px, -5px);
+}
+
+#galeria1
+{
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+}
+
+#galeria2,#galeria4,#galeria6
+{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+img{
+    border: 2px;
+    box-shadow: 3px 3px 1px #02010a;
+}
+
+#galeria3
+{
+    -webkit-filter: sepia(90%);
+    -moz-filter:  sepia(90%);
+    -o-filter:  sepia(90%);
+    filter:  sepia(90%);
+}
+
+
+@media all and (min-width: 900px) {
+    .aside { flex: 1 auto; }
+    .responsive-image{
+        width: 100%;
+
+    }
+    .aside1,.aside2,.aside3,.aside4,.aside5,.aside6 {width: 100%;}
+
+
+
+
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+.titlePage {
+    order: 0;
+    padding: 1em;
+
+}
+
+.item a{
+    color: #000;
+
+}
+
+.item  {
+    text-align: center;
+    color: #000;
+}
+
+
+footer .item {
+    color:#000;
+    text-align: left;
+}
+
+.footer {
+    justify-content: space-between;
+}
+
+/*MENU*/
+@media all and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .titlePage {
+        order: 0;
+        text-align: center;
+
+
+    }
+    .item {
+
+        text-align: center;
+        color: #fff;
+
+    }
+    footer .item {
+        text-align: left;
+
+    }
+    body {
+        width: 100%;
+        margin: 10px auto;
+        padding: 5px 5px 5px 5px;}
+}
+
+
+.fa {
+    padding: 1px;
+    width:10px;
+    text-align: center;
+    text-decoration: none;
+   /*margin: 5px 2px;*/
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: white;
+    color: indianred;
+}
